@@ -14,6 +14,7 @@ public enum NodeType
 
 public class MapNode
 {
+    public string id;
     public NodeType type;
     public MiniGameType gameType;
     public Vector2 position;
@@ -31,6 +32,13 @@ public class MapModel
     public MapModel()
     {
         nodes = new Dictionary<string, MapNode>();
+    }
+
+    public void SetCompleteAndRevealNext(string id)
+    {
+        nodes[id].completed = true;
+        if (nodes[id].next != null)
+            nodes[id].next.revealed = true;
     }
 
     public void Load(XmlDocument doc)
@@ -51,6 +59,7 @@ public class MapModel
                     switch (attr.Name)
                     {
                         case "ID":
+                            mapNode.id = attr.Value;
                             nodes[attr.Value] = mapNode;
                             break;
                         case "NodeType":
@@ -75,7 +84,7 @@ public class MapModel
             if (mapNode.type == NodeType.START)
             {
                 mapNode.revealed = true;
-                mapNode.next.revealed = true;
+                //mapNode.next.revealed = true;
             }
         }
     }

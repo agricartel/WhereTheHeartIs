@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
+    public static MapController instance;
+
     public enum ItemType
     {
         NONE = 0,
@@ -14,12 +16,18 @@ public class MapController : MonoBehaviour
 
     public GameObject mapNodePrefab;
     public GameObject mapNodeContainer;
+    public Camera mapCamera;
 
     List<MapNodeController> nodeControllers;
 
     MapModel mapData;
 
-	void Start ()
+    private void OnEnable()
+    {
+        instance = this;
+    }
+
+    void Start ()
     {
         mapData = new MapModel();
 
@@ -44,14 +52,21 @@ public class MapController : MonoBehaviour
             nodeControllers.Add(nodeController);
         }
     }
-	
-	void Update ()
+
+    private void Update()
     {
-		
-	}
+        foreach(MapNodeController node in nodeControllers)
+        {
+            node.gameObject.SetActive(node.nodeData.revealed);
+        }
+    }
 
+    public void CompleteNode(string id)
+    {
+        mapData.SetCompleteAndRevealNext(id);
+    }
 
-    public static void OnClick(ItemType type, int data1 = -1, int data2 = -1)
+    public static void OnClick(ItemType type, int data1 = -1, int data2 = -1, string data3 = null)
     {
 
         switch (type)
@@ -61,9 +76,18 @@ public class MapController : MonoBehaviour
                     NodeType nodeType = (NodeType)data1;
                     MiniGameType gameType = (MiniGameType)data2;
 
-                    if (nodeType == NodeType.GAME)
+                    switch(nodeType)
                     {
-                        GameController.instance.GoToMiniGame(gameType);
+                        case NodeType.START:
+                            {
+                                GameController.instance.RunCutScene("Data/CutScenes/CutSceneTest", data3);
+                            }
+                            break;
+                        case NodeType.GAME:
+                            {
+                                GameController.instance.GoToMiniGame(gameType, data3);
+                            }
+                            break;
                     }
 
                 }

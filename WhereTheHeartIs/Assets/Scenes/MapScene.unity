@@ -156,6 +156,7 @@ MonoBehaviour:
   mapNodePrefab: {fileID: 1762465833371084, guid: 3596d85e5cdb71a429103aad5a95fabd,
     type: 2}
   mapNodeContainer: {fileID: 942209780}
+  mapCamera: {fileID: 249223179}
 --- !u!1 &249223177
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +168,7 @@ GameObject:
   - component: {fileID: 249223179}
   - component: {fileID: 249223178}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Map Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,8 +394,8 @@ Canvas:
   m_GameObject: {fileID: 1308470540}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 249223179}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<Scene>
+	<Section>
+		<time>2.0</time>
+		<backgroundImage>Art/Backgrounds/Background (CIty)</backgroundImage>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oreinted Right</image>
+			<action>BOUNCE</action>
+		</leftCharacter>
+		<rightCharacter>
+			<image>Art/Characters/Lady Oriented Left</image>
+			<action>NONE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[Test 1]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>1.5</time>
+		<leftCharacter>
+			<action>NONE</action>
+		</leftCharacter>
+		<rightCharacter>
+			<action>NONE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[...]]></text>
+			<direction>RIGHT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>1.0</time>
+		<rightCharacter>
+			<image>Art/Characters/Lady Oriented Right</image>
+			<action>NONE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text/>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>0.5</time>
+		<rightCharacter>
+			<action>WALK_OFF_RIGHT</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[!]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>3.0</time>
+		<leftCharacter>
+			<action>WALK_CENTER</action>
+		</leftCharacter>
+		<rightCharacter>
+			<action>NONE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text/>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>3.0</time>
+		<leftCharacter>
+			<action>NONE</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[:(]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+</Scene>
