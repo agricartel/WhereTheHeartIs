@@ -9,6 +9,9 @@ public class CubeController : MonoBehaviour
     public Rigidbody2D cubeRigidBody;
 
     private bool IsGrounded = true;
+    private bool CanJump = true;
+    private bool JumpStarted = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -24,6 +27,7 @@ public class CubeController : MonoBehaviour
         Vector2 positiony = new Vector2(0f, 1f);
         cubeRigidBody.AddForce(positionx, ForceMode2D.Force);
 
+        //Debug.Log();
 
         //ContactFilter2D GroundFilter = new ContactFilter2D();
         //GroundFilter.
@@ -37,14 +41,19 @@ public class CubeController : MonoBehaviour
         {
             distance = Mathf.Abs(GroundRay.point.y - transform.position.y);
             //Debug.Log(distance);
-            IsGrounded = distance <= 1f;
+            CanJump = distance <= 1f;
+            if (!CanJump)
+                JumpStarted = false;
+            IsGrounded = distance <= 0.52f;
+
         }
 
-        //IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1.5f).distance <= 1.5f;
-        //Debug.Log(Physics2D.Raycast(transform.position, Vector2.down, 1.5f).distance);
-        if (IsGrounded && Input.GetButton("Jump"))
+        bool AllowingJump = IsGrounded || (JumpStarted && CanJump);
+
+        if (AllowingJump && Input.GetButton("Jump"))
         {
             cubeRigidBody.AddForce(positiony, ForceMode2D.Impulse);
+            JumpStarted = true;
         }
 
 
