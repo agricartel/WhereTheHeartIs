@@ -36,9 +36,12 @@ public class MapModel
 
     public void SetCompleteAndRevealNext(string id)
     {
-        nodes[id].completed = true;
-        if (nodes[id].next != null)
-            nodes[id].next.revealed = true;
+        if (nodes.ContainsKey(id))
+        {
+            nodes[id].completed = true;
+            if (nodes[id].next != null)
+                nodes[id].next.revealed = true;
+        }
     }
 
     public void Load(XmlDocument doc)

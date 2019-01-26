@@ -12,7 +12,7 @@
 			<action>NONE</action>
 		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[Test 1]]></text>
+			<text><![CDATA[<sprite name="heart">]]></text>
 			<direction>LEFT</direction>
 		</speechBubble>
 	</Section>
@@ -25,7 +25,7 @@
 			<action>NONE</action>
 		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[...]]></text>
+			<text><![CDATA[<sprite name="tear">]]></text>
 			<direction>RIGHT</direction>
 		</speechBubble>
 	</Section>
@@ -45,7 +45,7 @@
 			<action>WALK_OFF_RIGHT</action>
 		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[!]]></text>
+			<text><![CDATA[ ! ]]></text>
 			<direction>LEFT</direction>
 		</speechBubble>
 	</Section>
@@ -67,7 +67,7 @@
 			<action>NONE</action>
 		</leftCharacter>
 		<speechBubble>
-			<text><![CDATA[:(]]></text>
+			<text><![CDATA[<sprite name="crying">]]></text>
 			<direction>LEFT</direction>
 		</speechBubble>
 	</Section>

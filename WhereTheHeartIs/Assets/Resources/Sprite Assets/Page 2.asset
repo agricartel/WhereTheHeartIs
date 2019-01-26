@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a92b25f83d49b9bc132d206b370281, type: 3}
+  m_Name: Page 2
+  m_EditorClassIdentifier: 
+  hashCode: -1201978623
+  material: {fileID: 21327116580337466}
+  materialHashCode: 0
+  spriteSheet: {fileID: 2800000, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  spriteInfoList:
+  - id: 0
+    x: 299.0415
+    y: 1520.6447
+    width: 235.75887
+    height: 236.99971
+    xOffset: -20.6
+    yOffset: 197.6
+    xAdvance: 235.75887
+    scale: 1
+    name: heart_eyes
+    hashCode: -1877940257
+    unicode: 0
+    pivot: {x: -117.87943, y: 118.499855}
+    sprite: {fileID: 21300000, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  - id: 1
+    x: 1016.86523
+    y: 1510.0975
+    width: 235.75887
+    height: 235.13844
+    xOffset: -24.4
+    yOffset: 209.5
+    xAdvance: 235.75887
+    scale: 1
+    name: kiss
+    hashCode: 3797954
+    unicode: 0
+    pivot: {x: -117.87943, y: 117.56922}
+    sprite: {fileID: 21300010, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  - id: 2
+    x: 1084.4908
+    y: 1029.2736
+    width: 197.91336
+    height: 202.87671
+    xOffset: -21.4
+    yOffset: 188.1
+    xAdvance: 197.91336
+    scale: 1
+    name: safe_house
+    hashCode: -1744464086
+    unicode: 0
+    pivot: {x: -98.95668, y: 101.438354}
+    sprite: {fileID: 21300008, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  - id: 3
+    x: 299.0415
+    y: 980.881
+    width: 236.37929
+    height: 235.75887
+    xOffset: -28.5
+    yOffset: 202.2
+    xAdvance: 236.37929
+    scale: 1
+    name: tear
+    hashCode: 4061858
+    unicode: 0
+    pivot: {x: -118.189644, y: 117.87943}
+    sprite: {fileID: 21300002, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  - id: 4
+    x: 1106.8258
+    y: 531.0779
+    width: 135.87155
+    height: 183.64375
+    xOffset: -24
+    yOffset: 165.1
+    xAdvance: 135.87155
+    scale: 1
+    name: girl_left
+    hashCode: -486352012
+    unicode: 0
+    pivot: {x: -67.935776, y: 91.82188}
+    sprite: {fileID: 21300006, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  - id: 5
+    x: 310.82947
+    y: 498.1957
+    width: 130.90822
+    height: 190.46835
+    xOffset: -19.5
+    yOffset: 178.9
+    xAdvance: 130.90822
+    scale: 1
+    name: dude_right
+    hashCode: 1078815087
+    unicode: 0
+    pivot: {x: -65.45411, y: 95.23418}
+    sprite: {fileID: 21300004, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+  fallbackSpriteAssets: []
+--- !u!21 &21327116580337466
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TextMeshPro/Sprite
+  m_Shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0af4ce17c1fea2d46b42c02dde3a64ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
