@@ -73,9 +73,14 @@ public class GameController : MonoBehaviour
 
         switch (gameType)
         {
-            case MiniGameType.TEST:
+            case MiniGameType.PLATFORMER:
                 {
-                    SceneManager.LoadScene("TestMiniGame", LoadSceneMode.Additive);
+                    SceneManager.LoadScene("PlatformMinigame", LoadSceneMode.Additive);
+                }
+                break;
+            case MiniGameType.COLLECT:
+                {
+                    SceneManager.LoadScene("CollectMiniGame", LoadSceneMode.Additive);
                 }
                 break;
         }

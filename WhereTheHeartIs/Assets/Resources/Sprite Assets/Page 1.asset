@@ -35,8 +35,8 @@ MonoBehaviour:
     y: 1547.1709
     width: 198.59393
     height: 167.56364
-    xOffset: -37.6
-    yOffset: 136.1
+    xOffset: -17
+    yOffset: 152.4
     xAdvance: 198.59393
     scale: 1
     name: heart

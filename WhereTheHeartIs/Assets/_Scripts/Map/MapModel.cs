@@ -9,6 +9,7 @@ public enum NodeType
 {
     START,
     GAME,
+    CUT_SCENE,
     END
 }
 
@@ -17,6 +18,7 @@ public class MapNode
     public string id;
     public NodeType type;
     public MiniGameType gameType;
+    public string cutScene;
     public Vector2 position;
     public bool completed;
     public bool revealed;
@@ -42,6 +44,14 @@ public class MapModel
             if (nodes[id].next != null)
                 nodes[id].next.revealed = true;
         }
+    }
+
+    public MapNode GetNode(string id)
+    {
+        if (nodes.ContainsKey(id))
+            return nodes[id];
+
+        return null;
     }
 
     public void Load(XmlDocument doc)

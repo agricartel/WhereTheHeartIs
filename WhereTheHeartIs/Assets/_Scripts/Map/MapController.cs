@@ -66,7 +66,7 @@ public class MapController : MonoBehaviour
         mapData.SetCompleteAndRevealNext(id);
     }
 
-    public static void OnClick(ItemType type, int data1 = -1, int data2 = -1, string data3 = null)
+    public void OnClick(ItemType type, int data1 = -1, int data2 = -1, string data3 = null)
     {
 
         switch (type)
@@ -81,6 +81,11 @@ public class MapController : MonoBehaviour
                         case NodeType.START:
                             {
                                 GameController.instance.RunCutScene("Data/CutScenes/CutSceneTest", data3);
+                            }
+                            break;
+                        case NodeType.CUT_SCENE:
+                            {
+                                GameController.instance.RunCutScene(mapData.GetNode(data3).cutScene, data3);
                             }
                             break;
                         case NodeType.GAME:

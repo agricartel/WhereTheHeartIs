@@ -173,7 +173,7 @@ Prefab:
     - target: {fileID: 224174693868994132, guid: 6b41921dff3071249ae4e7cfbdb44531,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 467.9
+      value: 510.72
       objectReference: {fileID: 0}
     - target: {fileID: 224174693868994132, guid: 6b41921dff3071249ae4e7cfbdb44531,
         type: 2}
@@ -223,6 +223,21 @@ Prefab:
     - target: {fileID: 114924564727028326, guid: 6b41921dff3071249ae4e7cfbdb44531,
         type: 2}
       propertyPath: m_inputSource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114263231153569996, guid: 6b41921dff3071249ae4e7cfbdb44531,
+        type: 2}
+      propertyPath: text
+      value: test <sprite name="heart">...
+      objectReference: {fileID: 0}
+    - target: {fileID: 224748676821932788, guid: 6b41921dff3071249ae4e7cfbdb44531,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224748676821932788, guid: 6b41921dff3071249ae4e7cfbdb44531,
+        type: 2}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -650,7 +665,7 @@ MonoBehaviour:
   rightCharacter: {fileID: 1336544758}
   rightCharacterImage: {fileID: 1828182450}
   speechBubble: {fileID: 2124563563}
-  isTesting: 0
+  isTesting: 1
   testingFile: Data/CutScenes/CutSceneTest
 --- !u!1 &1638133177
 GameObject:

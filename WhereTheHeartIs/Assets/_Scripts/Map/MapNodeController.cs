@@ -30,7 +30,7 @@ public class MapNodeController : MonoBehaviour
 
         connectorImage = connector.GetComponent<Image>();
 
-        buttonObj.onClick.AddListener(() => MapController.OnClick(MapController.ItemType.MAP_NODE_BUTTON, (int)nodeData.type, (int)nodeData.gameType, nodeData.id));
+        buttonObj.onClick.AddListener(() => MapController.instance.OnClick(MapController.ItemType.MAP_NODE_BUTTON, (int)nodeData.type, (int)nodeData.gameType, nodeData.id));
 	}
 
     void Update ()
@@ -41,6 +41,15 @@ public class MapNodeController : MonoBehaviour
         rectTransform.localPosition = nodeData.position;
 
         myImage.sprite = nodeData.completed ? complete : uncomplete;
+
+        if (nodeData.completed)
+        {
+            buttonObj.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            buttonObj.transform.localScale = Vector3.one * 1.5f + Vector3.one * 0.3f * Mathf.Cos(Time.time*4);
+        }
 
         connector.SetActive(nodeData.next != null);
 
