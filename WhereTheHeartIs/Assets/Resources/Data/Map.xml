@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<Map>
+	<Node
+		ID="START_NODE"
+		NodeType="START"
+		GameType=""
+		yPos="0"
+		xPos="200"
+		NextNodeID="FIRST_MINIGAME"
+	/>
+	<Node
+		ID="FIRST_MINIGAME"
+		NodeType="GAME"
+		GameType="TEST"
+		yPos="200"
+		xPos="400"
+		NextNodeID="SECOND_MINIGAME"
+	/>
+	<Node
+		ID="SECOND_MINIGAME"
+		NodeType="GAME"
+		GameType="TEST"
+		yPos="0"
+		xPos="600"
+		NextNodeID="SIGNIFICANT_OTHER"
+	/>
+	<Node
+		ID="SIGNIFICANT_OTHER"
+		NodeType="END"
+		GameType=""
+		yPos="200"
+		xPos="800"
+		NextNodeID=""
+	/>
+</Map>
