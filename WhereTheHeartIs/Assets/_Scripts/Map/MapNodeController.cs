@@ -19,15 +19,18 @@ public class MapNodeController : MonoBehaviour
     Image myImage;
     Image connectorImage;
 
+    RectTransform rectTransform;
+
     public MapNode nodeData;
 
 	void Start ()
     {
         myImage = buttonObj.image;
+        rectTransform = GetComponent<RectTransform>();
 
         connectorImage = connector.GetComponent<Image>();
 
-        buttonObj.onClick.AddListener(() => MapController.OnClick(MapController.ItemType.MAP_NODE_BUTTON, (int)nodeData.type, (int)nodeData.gameType));
+        buttonObj.onClick.AddListener(() => MapController.OnClick(MapController.ItemType.MAP_NODE_BUTTON, (int)nodeData.type, (int)nodeData.gameType, nodeData.id));
 	}
 
     void Update ()
@@ -35,9 +38,7 @@ public class MapNodeController : MonoBehaviour
         if (nodeData == null)
             return;
 
-        gameObject.SetActive(nodeData.revealed);
-
-        transform.position = nodeData.position + new Vector2(0, Screen.height / 2);
+        rectTransform.localPosition = nodeData.position;
 
         myImage.sprite = nodeData.completed ? complete : uncomplete;
 
@@ -51,10 +52,11 @@ public class MapNodeController : MonoBehaviour
             float dist = Vector2.Distance(nodeData.position, nodeData.next.position);
             float angle = Mathf.Atan2(nodeData.next.position.y - nodeData.position.y, nodeData.next.position.x - nodeData.position.x) * Mathf.Rad2Deg;
 
-            connector.transform.position = midpoint + new Vector2(0, Screen.height / 2);
+            //connector.transform.position = midpoint;
             RectTransform connectorTransform = connector.GetComponent<RectTransform>();
             connectorTransform.sizeDelta = new Vector2(dist, 20);
             connectorTransform.rotation = Quaternion.Euler(0, 0, angle);
+            connectorTransform.localPosition = nodeData.next.position - midpoint;
         }
 
 

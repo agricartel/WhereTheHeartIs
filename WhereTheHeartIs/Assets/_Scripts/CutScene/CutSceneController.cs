@@ -4,8 +4,12 @@ using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CutSceneController : MonoBehaviour
+public class CutSceneController : MonoBehaviour, IMiniGame
 {
+    public static CutSceneController instance;
+
+    public GameObject ControllerObject { get { return gameObject; } }
+
     public enum Action
     {
         NONE = 0,
@@ -40,7 +44,7 @@ public class CutSceneController : MonoBehaviour
     Action leftCharacterAction;
     Action rightCharacterAction;
 
-    bool doneCutScene;
+    bool doneCutScene = false;
     float sectionTime = 0;
     float time = 0;
 
@@ -50,12 +54,36 @@ public class CutSceneController : MonoBehaviour
 
     public bool isTesting = false;
     public string testingFile = "";
-    public void Start()
+    public void OnEnable()
     {
+        ResetCutScene();
+        instance = this;
         if (isTesting && !string.IsNullOrEmpty(testingFile))
         {
             SetCutScene(testingFile);
         }
+    }
+
+    public void OnDestroy()
+    {
+        instance = null;
+    }
+
+    public bool IsFinished()
+    {
+        return doneCutScene;
+    }
+
+    public bool DidComplete()
+    {
+        return doneCutScene;
+    }
+
+    public void ResetCutScene()
+    {
+        doneCutScene = false;
+        currentSection = 0;
+        time = 0;
     }
 
     public void SetCutScene(string file)
@@ -64,9 +92,7 @@ public class CutSceneController : MonoBehaviour
         cutSceneDoc = new XmlDocument();
         cutSceneDoc.LoadXml(xmlAsset.text);
 
-        doneCutScene = false;
-        currentSection = 0;
-        time = 0;
+        ResetCutScene();
 
         PlayCurrentSection();
     }

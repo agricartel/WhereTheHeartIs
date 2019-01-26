@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using UnityEngine;
 
 public enum MiniGameType
 {
@@ -14,6 +14,7 @@ public enum MiniGameType
 
 public interface IMiniGame
 {
-
-    bool finishedMiniGame();
+    GameObject ControllerObject { get; }
+    bool IsFinished();
+    bool DidComplete();
 }

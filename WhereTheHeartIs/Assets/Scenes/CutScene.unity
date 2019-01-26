@@ -664,7 +664,7 @@ MonoBehaviour:
   rightCharacter: {fileID: 1336544758}
   rightCharacterImage: {fileID: 1828182450}
   speechBubble: {fileID: 2124563563}
-  isTesting: 1
+  isTesting: 0
   testingFile: Data/CutScenes/CutSceneTest
 --- !u!1 &1638133177
 GameObject:
