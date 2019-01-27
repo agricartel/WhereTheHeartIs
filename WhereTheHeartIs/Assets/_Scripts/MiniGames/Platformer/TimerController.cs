@@ -9,7 +9,7 @@ public class TimerController : MonoBehaviour, IMiniGame {
     public TMP_Text TimerText;
     //private float Timer = 120f;
     DateTime BeginTime;
-    int time = 120;
+    int time = 100;
 
     bool CompletedMission = false;
 
