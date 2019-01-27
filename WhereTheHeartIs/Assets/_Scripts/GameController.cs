@@ -27,6 +27,11 @@ public class GameController : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    public void SetMinigame(IMiniGame miniGame)
+    {
+        currentMiniGame = miniGame;
+    }
+
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (mode == LoadSceneMode.Additive)
