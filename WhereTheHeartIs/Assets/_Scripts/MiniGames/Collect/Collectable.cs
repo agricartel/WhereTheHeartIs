@@ -20,11 +20,8 @@ public class Collectable : MonoBehaviour
 
     private void Start()
     {
-        if (goodObject)
-        {
-            Sprite[] goodSprites = Resources.LoadAll<Sprite>("Art/Obsticals/Search Find Objects");
-            spriteRenderer.sprite = goodSprites[(int)Random.Range(0, goodSprites.Length)];
-        }
+        Sprite[] spriteOptions = Resources.LoadAll<Sprite>(goodObject ? "Art/Obsticals/Search Find Objects" : "Art/Obsticals/Toxic Search Find Objects");
+        spriteRenderer.sprite = spriteOptions[(int)Random.Range(0, spriteOptions.Length)];
     }
 
     void Update ()
