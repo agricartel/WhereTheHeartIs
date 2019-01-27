@@ -13,6 +13,9 @@ public class Collectable : MonoBehaviour
     public const float TIMER_MAX = 0.7f;
     public float disappearTimer = TIMER_MAX;
 
+    public AudioSource GoodSound;
+    public AudioSource BadSound;
+
     public bool PlayerGotMe()
     {
         return playerGotMe;
@@ -54,6 +57,11 @@ public class Collectable : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerGotMe = true;
+
+            if (goodObject)
+                GoodSound.Play();
+            else
+                BadSound.Play();
         }
     }
 }

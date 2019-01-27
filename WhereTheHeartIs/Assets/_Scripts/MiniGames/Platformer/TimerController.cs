@@ -55,9 +55,14 @@ public class TimerController : MonoBehaviour, IMiniGame {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        FlagPole.Play();
+
         if (other.gameObject.name == "Player")
             CompletedMission = true;
-        FlagPole.Play();
+
+
+        Waiter();
+        Debug.Log("Yes");
     }
 
     public bool IsFinished()
@@ -68,5 +73,10 @@ public class TimerController : MonoBehaviour, IMiniGame {
     public bool DidComplete()
     {
         return CompletedMission;
+    }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(10);
     }
 }
