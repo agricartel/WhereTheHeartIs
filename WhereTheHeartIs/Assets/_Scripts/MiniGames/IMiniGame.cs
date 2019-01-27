@@ -6,7 +6,10 @@ using UnityEngine;
 
 public enum MiniGameType
 {
-    TEST = 0,
+    NONE = 0,
+
+    PLATFORMER,
+    COLLECT,
 
     NUM_GAMES,
 }

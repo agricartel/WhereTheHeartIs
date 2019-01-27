@@ -27,6 +27,11 @@ public class GameController : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    public void SetMinigame(IMiniGame miniGame)
+    {
+        currentMiniGame = miniGame;
+    }
+
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (mode == LoadSceneMode.Additive)
@@ -73,9 +78,14 @@ public class GameController : MonoBehaviour
 
         switch (gameType)
         {
-            case MiniGameType.TEST:
+            case MiniGameType.PLATFORMER:
                 {
-                    SceneManager.LoadScene("TestMiniGame", LoadSceneMode.Additive);
+                    SceneManager.LoadScene("PlatformMinigame", LoadSceneMode.Additive);
+                }
+                break;
+            case MiniGameType.COLLECT:
+                {
+                    SceneManager.LoadScene("CollectMiniGame", LoadSceneMode.Additive);
                 }
                 break;
         }
