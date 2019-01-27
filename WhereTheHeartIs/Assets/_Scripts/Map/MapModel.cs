@@ -81,6 +81,9 @@ public class MapModel
                         case "GameType":
                             mapNode.gameType = (MiniGameType)Enum.Parse(typeof(MiniGameType), attr.Value);
                             break;
+                        case "CutSceneType":
+                            mapNode.cutScene = attr.Value;
+                            break;
                         case "yPos":
                             mapNode.position.y = int.Parse(attr.Value);
                             break;

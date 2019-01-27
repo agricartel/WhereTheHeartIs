@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MapController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MapController : MonoBehaviour
     public GameObject mapNodePrefab;
     public GameObject mapNodeContainer;
     public Camera mapCamera;
+    public Canvas myCanvas;
 
     List<MapNodeController> nodeControllers;
 
@@ -66,6 +68,11 @@ public class MapController : MonoBehaviour
         mapData.SetCompleteAndRevealNext(id);
     }
 
+    public void SetUIEnabled(bool value)
+    {
+        myCanvas.gameObject.SetActive(value);
+    }
+
     public void OnClick(ItemType type, int data1 = -1, int data2 = -1, string data3 = null)
     {
 
@@ -91,6 +98,11 @@ public class MapController : MonoBehaviour
                         case NodeType.GAME:
                             {
                                 GameController.instance.GoToMiniGame(gameType, data3);
+                            }
+                            break;
+                        case NodeType.END:
+                            {
+                                GameController.instance.RunCutScene("Data/CutScenes/FinalScene", data3);
                             }
                             break;
                     }

@@ -18,6 +18,11 @@ public class CutSceneController : MonoBehaviour, IMiniGame
         WALK_CENTER,
         WALK_OFF_LEFT,
         WALK_OFF_RIGHT,
+        WALK_ON_LEFT,
+        WALK_ON_RIGHT,
+        WALK_LEFT,
+        WALK_RIGHT,
+        HIDE,
 
         NUM_ACTIONS
     }
@@ -50,6 +55,9 @@ public class CutSceneController : MonoBehaviour, IMiniGame
 
     Vector2 leftCharacterLocation = new Vector2(-6, -1);
     Vector2 rightCharacterLocation = new Vector2(6, -1);
+
+    Vector2 currentLeftCharacterLocation = new Vector2(-6, -1);
+    Vector2 currentRightCharacterLocation = new Vector2(6, -1);
 
 
     public bool isTesting = false;
@@ -130,6 +138,7 @@ public class CutSceneController : MonoBehaviour, IMiniGame
         }
         else
         {
+            currentSection = 0;
             doneCutScene = true;
         }
     }
@@ -177,6 +186,9 @@ public class CutSceneController : MonoBehaviour, IMiniGame
             // next section
             currentSection++;
             PlayCurrentSection();
+
+            currentLeftCharacterLocation = leftCharacter.transform.position;
+            currentRightCharacterLocation = rightCharacter.transform.position;
         }
         else
         {
@@ -185,15 +197,16 @@ public class CutSceneController : MonoBehaviour, IMiniGame
             float percentDone = sectionTime <= 0 ? 0 : (sectionTime - time) / sectionTime;
 
             // execute actions here
-            ExecuteCharacterAction(leftCharacter, leftCharacterAction, leftCharacterLocation, percentDone);
-            ExecuteCharacterAction(rightCharacter, rightCharacterAction, rightCharacterLocation, percentDone);
+            ExecuteCharacterAction(leftCharacter, leftCharacterAction, currentLeftCharacterLocation, leftCharacterLocation, percentDone);
+            ExecuteCharacterAction(rightCharacter, rightCharacterAction, currentRightCharacterLocation, rightCharacterLocation, percentDone);
 
         }
 	}
 
 
-    private void ExecuteCharacterAction(GameObject characterObj, Action characterAction, Vector2 characterNormalPosition, float percentDone)
+    private void ExecuteCharacterAction(GameObject characterObj, Action characterAction, Vector2 prevPosition, Vector2 characterNormalPosition, float percentDone)
     {
+        characterObj.SetActive(true);
         switch (characterAction)
         {
             case Action.NONE:
@@ -209,6 +222,21 @@ public class CutSceneController : MonoBehaviour, IMiniGame
                 break;
             case Action.WALK_OFF_RIGHT:
                 characterObj.transform.position = Vector2.Lerp(characterNormalPosition, new Vector2(12, characterNormalPosition.y), percentDone);
+                break;
+            case Action.WALK_ON_LEFT:
+                characterObj.transform.position = Vector2.Lerp(new Vector2(-12, characterNormalPosition.y), characterNormalPosition, percentDone);
+                break;
+            case Action.WALK_ON_RIGHT:
+                characterObj.transform.position = Vector2.Lerp(new Vector2(12, characterNormalPosition.y), characterNormalPosition, percentDone);
+                break;
+            case Action.WALK_RIGHT:
+                characterObj.transform.position = Vector2.Lerp(prevPosition, rightCharacterLocation, percentDone);
+                break;
+            case Action.WALK_LEFT:
+                characterObj.transform.position = Vector2.Lerp(prevPosition, leftCharacterLocation, percentDone);
+                break;
+            case Action.HIDE:
+                characterObj.SetActive(false);
                 break;
         }
     }

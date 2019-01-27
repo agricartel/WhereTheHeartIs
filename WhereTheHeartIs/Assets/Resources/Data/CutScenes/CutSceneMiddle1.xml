@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<Scene>
+	<Section>
+		<time>2.5</time>
+		<backgroundImage>Art/Backgrounds/Background_Color</backgroundImage>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Right</image>
+			<action>WALK_ON_LEFT</action>
+		</leftCharacter>
+		<rightCharacter>
+			<image>Art/Characters/Lady Oriented Left</image>
+			<action>HIDE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[...]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>4.0</time>
+		<leftCharacter>
+			<action>WALK_RIGHT</action>
+		</leftCharacter>
+		<speechBubble>
+			<text/>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>5.0</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Left</image>
+			<action>WALK_LEFT</action>
+		</leftCharacter>
+	</Section>
+	<Section>
+		<time>2.0</time>
+		<leftCharacter>
+			<action>NONE</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="tear">]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>2.0</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Right</image>
+			<action>NONE</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="safe_house">!]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>5.0</time>
+		<leftCharacter>
+			<action>WALK_OFF_RIGHT</action>
+		</leftCharacter>
+		<speechBubble>
+			<text/>
+		</speechBubble>
+	</Section>
+</Scene>

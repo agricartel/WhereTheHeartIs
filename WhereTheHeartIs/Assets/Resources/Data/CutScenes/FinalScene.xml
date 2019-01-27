@@ -5,15 +5,14 @@
 		<backgroundImage>Art/Backgrounds/Background_City</backgroundImage>
 		<leftCharacter>
 			<image>Art/Characters/Dude Oriented Right</image>
-			<action>BOUNCE</action>
+			<action>WALK_ON_LEFT</action>
 		</leftCharacter>
 		<rightCharacter>
 			<image>Art/Characters/Lady Oriented Left</image>
-			<action>NONE</action>
+			<action>HIDE</action>
 		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[<sprite name="heart">]]></text>
-			<direction>LEFT</direction>
+			<text/>
 		</speechBubble>
 	</Section>
 	<Section>
@@ -21,28 +20,25 @@
 		<leftCharacter>
 			<action>NONE</action>
 		</leftCharacter>
-		<rightCharacter>
-			<action>NONE</action>
-		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[<sprite name="tear">]]></text>
+			<text><![CDATA[<sprite name="girl_right">?]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>0.75</time>
+		<speechBubble>
+			<text><![CDATA[...]]></text>
 			<direction>RIGHT</direction>
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>1.0</time>
-		<rightCharacter>
-			<image>Art/Characters/Lady Oriented Right</image>
-			<action>NONE</action>
-		</rightCharacter>
-		<speechBubble>
-			<text/>
-		</speechBubble>
-	</Section>
-	<Section>
 		<time>0.5</time>
+		<leftCharacter>
+			<action>BOUNCE</action>
+		</leftCharacter>
 		<rightCharacter>
-			<action>WALK_OFF_RIGHT</action>
+			<action>WALK_ON_RIGHT</action>
 		</rightCharacter>
 		<speechBubble>
 			<text><![CDATA[ ! ]]></text>
@@ -50,24 +46,40 @@
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>3.0</time>
+		<time>1</time>
+		<leftCharacter>
+			<action>NONE</action>
+		</leftCharacter>
+		<rightCharacter>
+			<action>NONE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="blushing">]]></text>
+			<direction>RIGHT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>1</time>
 		<leftCharacter>
 			<action>WALK_CENTER</action>
 		</leftCharacter>
 		<rightCharacter>
-			<action>NONE</action>
+			<action>WALK_CENTER</action>
 		</rightCharacter>
 		<speechBubble>
 			<text/>
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>3.0</time>
+		<time>1</time>
 		<leftCharacter>
 			<action>NONE</action>
 		</leftCharacter>
+		<rightCharacter>
+			<action>NONE</action>
+		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[<sprite name="crying">]]></text>
+			<text><![CDATA[<sprite name="heart">]]></text>
 			<direction>LEFT</direction>
 		</speechBubble>
 	</Section>
