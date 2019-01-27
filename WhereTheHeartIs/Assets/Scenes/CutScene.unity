@@ -700,7 +700,7 @@ MonoBehaviour:
   rightCharacterImage: {fileID: 1828182450}
   speechBubble: {fileID: 2124563563}
   isTesting: 1
-  testingFile: Data/CutScenes/CutSceneMiddle1
+  testingFile: Data/CutScenes/FinalScene
 --- !u!1 &1638133177
 GameObject:
   m_ObjectHideFlags: 0

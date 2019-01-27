@@ -1,26 +1,81 @@
 <?xml version="1.0" ?>
 <Scene>
 	<Section>
-		<time>2.0</time>
-		<backgroundImage>Art/Backgrounds/Background_City</backgroundImage>
+		<time>3.0</time>
+		<backgroundImage>Art/Backgrounds/Background (Hazard)</backgroundImage>
 		<leftCharacter>
 			<image>Art/Characters/Dude Oriented Right</image>
-			<action>BOUNCE</action>
+			<action>WALK_ON_LEFT</action>
 		</leftCharacter>
 		<rightCharacter>
 			<image>Art/Characters/Lady Oriented Left</image>
-			<action>NONE</action>
+			<action>HIDE</action>
 		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[<sprite name="heart">]]></text>
+			<text/>
 			<direction>LEFT</direction>
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>1.5</time>
+		<time>1.0</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Right</image>
+			<action>NONE</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="girl_right">]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>5.5</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Right</image>
+			<action>BOUNCE</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="girl_right"><sprite name="heart">]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>2.0</time>
 		<leftCharacter>
 			<action>NONE</action>
 		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="tear">]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>4.0</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Left</image>
+			<action>WALK_OFF_LEFT</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="tear">]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<backgroundImage>Art/Backgrounds/Background_City</backgroundImage>
+		<time>2.0</time>
+		<leftCharacter>
+			<action>HIDE</action>
+		</leftCharacter>
+		<rightCharacter>
+			<image>Art/Characters/Lady Oriented Left</image>
+			<action>WALK_ON_RIGHT</action>
+		</rightCharacter>
+		<speechBubble>
+			<text/>
+			<direction>RIGHT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>1.5</time>
 		<rightCharacter>
 			<action>NONE</action>
 		</rightCharacter>
@@ -30,45 +85,34 @@
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>1.0</time>
+		<time>1.5</time>
 		<rightCharacter>
-			<image>Art/Characters/Lady Oriented Right</image>
-			<action>NONE</action>
+			<action>WALK_CENTER</action>
 		</rightCharacter>
 		<speechBubble>
-			<text/>
+			<text><![CDATA[<sprite name="tear">]]></text>
+			<direction>RIGHT</direction>
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>0.5</time>
+		<time>2.0</time>
 		<rightCharacter>
+			<action>NONE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="crying">]]></text>
+			<direction>RIGHT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>5.0</time>
+		<rightCharacter>
+			<image>Art/Characters/Lady Oriented RIGHT</image>
 			<action>WALK_OFF_RIGHT</action>
 		</rightCharacter>
 		<speechBubble>
-			<text><![CDATA[ ! ]]></text>
-			<direction>LEFT</direction>
-		</speechBubble>
-	</Section>
-	<Section>
-		<time>3.0</time>
-		<leftCharacter>
-			<action>WALK_CENTER</action>
-		</leftCharacter>
-		<rightCharacter>
-			<action>NONE</action>
-		</rightCharacter>
-		<speechBubble>
-			<text/>
-		</speechBubble>
-	</Section>
-	<Section>
-		<time>3.0</time>
-		<leftCharacter>
-			<action>NONE</action>
-		</leftCharacter>
-		<speechBubble>
 			<text><![CDATA[<sprite name="crying">]]></text>
-			<direction>LEFT</direction>
+			<direction>RIGHT</direction>
 		</speechBubble>
 	</Section>
 </Scene>

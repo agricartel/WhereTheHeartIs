@@ -2,7 +2,7 @@
 <Scene>
 	<Section>
 		<time>2.0</time>
-		<backgroundImage>Art/Backgrounds/Background_City</backgroundImage>
+		<backgroundImage>Art/Backgrounds/Background (CityDaytime)</backgroundImage>
 		<leftCharacter>
 			<image>Art/Characters/Dude Oriented Right</image>
 			<action>WALK_ON_LEFT</action>
