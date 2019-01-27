@@ -2,9 +2,9 @@
 <Scene>
 	<Section>
 		<time>2.0</time>
-		<backgroundImage>Art/Backgrounds/Background (CIty)</backgroundImage>
+		<backgroundImage>Art/Backgrounds/Background_City</backgroundImage>
 		<leftCharacter>
-			<image>Art/Characters/Dude Oreinted Right</image>
+			<image>Art/Characters/Dude Oriented Right</image>
 			<action>BOUNCE</action>
 		</leftCharacter>
 		<rightCharacter>

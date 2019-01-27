@@ -2,9 +2,9 @@
 <Scene>
 	<Section>
 		<time>2.5</time>
-		<backgroundImage>Art/Backgrounds/Background (Color)</backgroundImage>
+		<backgroundImage>Art/Backgrounds/Background_Color</backgroundImage>
 		<leftCharacter>
-			<image>Art/Characters/Dude Oreinted Right</image>
+			<image>Art/Characters/Dude Oriented Right</image>
 			<action>WALK_ON_LEFT</action>
 		</leftCharacter>
 		<rightCharacter>
