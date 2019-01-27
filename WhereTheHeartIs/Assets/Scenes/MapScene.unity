@@ -157,6 +157,7 @@ MonoBehaviour:
     type: 2}
   mapNodeContainer: {fileID: 942209780}
   mapCamera: {fileID: 249223179}
+  myCanvas: {fileID: 1308470543}
 --- !u!1 &249223177
 GameObject:
   m_ObjectHideFlags: 0

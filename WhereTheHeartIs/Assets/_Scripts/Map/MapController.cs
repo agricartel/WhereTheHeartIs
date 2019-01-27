@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MapController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MapController : MonoBehaviour
     public GameObject mapNodePrefab;
     public GameObject mapNodeContainer;
     public Camera mapCamera;
+    public Canvas myCanvas;
 
     List<MapNodeController> nodeControllers;
 
@@ -64,6 +66,11 @@ public class MapController : MonoBehaviour
     public void CompleteNode(string id)
     {
         mapData.SetCompleteAndRevealNext(id);
+    }
+
+    public void SetUIEnabled(bool value)
+    {
+        myCanvas.gameObject.SetActive(value);
     }
 
     public void OnClick(ItemType type, int data1 = -1, int data2 = -1, string data3 = null)

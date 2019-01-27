@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour
         if (mode == LoadSceneMode.Additive)
         {
             MapController.instance.mapCamera.gameObject.SetActive(false);
+            MapController.instance.SetUIEnabled(false);
         }
 
         if (scene.name == "CutScene")
@@ -65,6 +66,7 @@ public class GameController : MonoBehaviour
 
                 SceneManager.SetActiveScene(MapController.instance.gameObject.scene);
                 MapController.instance.mapCamera.gameObject.SetActive(true);
+                MapController.instance.SetUIEnabled(true);
             }
         }
 	}

@@ -12,7 +12,7 @@
 	<Node
 		ID="FIRST_MINIGAME"
 		NodeType="GAME"
-		GameType="PLATFORMER"
+		GameType="COLLECT"
 		CutSceneType=""
 		xPos="-580"
 		yPos="200"
@@ -21,7 +21,7 @@
 	<Node
 		ID="SECOND_MINIGAME"
 		NodeType="GAME"
-		GameType="COLLECT"
+		GameType="PLATFORMER"
 		CutSceneType=""
 		xPos="-380"
 		yPos="0"
