@@ -17,23 +17,49 @@
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>1.5</time>
+		<time>4.0</time>
 		<leftCharacter>
-			<action>WALK_CENTER</action>
+			<action>WALK_RIGHT</action>
 		</leftCharacter>
 		<speechBubble>
 			<text/>
 		</speechBubble>
 	</Section>
 	<Section>
-		<time>1.5</time>
+		<time>5.0</time>
 		<leftCharacter>
 			<image>Art/Characters/Dude Oriented Left</image>
 			<action>WALK_LEFT</action>
 		</leftCharacter>
+	</Section>
+	<Section>
+		<time>2.0</time>
+		<leftCharacter>
+			<action>NONE</action>
+		</leftCharacter>
 		<speechBubble>
 			<text><![CDATA[<sprite name="tear">]]></text>
-			<direction>RIGHT</direction>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>2.0</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Right</image>
+			<action>NONE</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="safe_house">!]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>5.0</time>
+		<leftCharacter>
+			<action>WALK_OFF_RIGHT</action>
+		</leftCharacter>
+		<speechBubble>
+			<text/>
 		</speechBubble>
 	</Section>
 </Scene>

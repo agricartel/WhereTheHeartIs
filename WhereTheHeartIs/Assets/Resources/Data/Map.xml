@@ -20,7 +20,7 @@
 	/>
 	<Node
 		ID="CUT_SCENE_MIDDLE_1"
-		NodeType="GAME"
+		NodeType="CUT_SCENE"
 		GameType=""
 		CutSceneType="Data/CutScenes/CutSceneMiddle1"
 		xPos="-380"
@@ -41,7 +41,7 @@
 		NodeType="END"
 		GameType=""
 		CutSceneType=""
-		xPos="180"
+		xPos="80"
 		yPos="0"
 		NextNodeID=""
 	/>
