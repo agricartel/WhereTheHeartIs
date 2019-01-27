@@ -100,6 +100,11 @@ public class MapController : MonoBehaviour
                                 GameController.instance.GoToMiniGame(gameType, data3);
                             }
                             break;
+                        case NodeType.END:
+                            {
+                                GameController.instance.RunCutScene("Data/CutScenes/FinalScene", data3);
+                            }
+                            break;
                     }
 
                 }

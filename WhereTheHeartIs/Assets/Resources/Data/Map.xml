@@ -16,6 +16,15 @@
 		CutSceneType=""
 		xPos="-580"
 		yPos="200"
+		NextNodeID="CUT_SCENE_MIDDLE_1"
+	/>
+	<Node
+		ID="CUT_SCENE_MIDDLE_1"
+		NodeType="GAME"
+		GameType=""
+		CutSceneType="Data/CutScenes/CutSceneMiddle1"
+		xPos="-380"
+		yPos="0"
 		NextNodeID="SECOND_MINIGAME"
 	/>
 	<Node
@@ -23,8 +32,8 @@
 		NodeType="GAME"
 		GameType="PLATFORMER"
 		CutSceneType=""
-		xPos="-380"
-		yPos="0"
+		xPos="-180"
+		yPos="200"
 		NextNodeID="SIGNIFICANT_OTHER"
 	/>
 	<Node
@@ -32,8 +41,8 @@
 		NodeType="END"
 		GameType=""
 		CutSceneType=""
-		xPos="-180"
-		yPos="200"
+		xPos="180"
+		yPos="0"
 		NextNodeID=""
 	/>
 </Map>

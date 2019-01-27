@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<Scene>
+	<Section>
+		<time>2.5</time>
+		<backgroundImage>Art/Backgrounds/Background (Color)</backgroundImage>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oreinted Right</image>
+			<action>WALK_ON_LEFT</action>
+		</leftCharacter>
+		<rightCharacter>
+			<image>Art/Characters/Lady Oriented Left</image>
+			<action>HIDE</action>
+		</rightCharacter>
+		<speechBubble>
+			<text><![CDATA[...]]></text>
+			<direction>LEFT</direction>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>1.5</time>
+		<leftCharacter>
+			<action>WALK_CENTER</action>
+		</leftCharacter>
+		<speechBubble>
+			<text/>
+		</speechBubble>
+	</Section>
+	<Section>
+		<time>1.5</time>
+		<leftCharacter>
+			<image>Art/Characters/Dude Oriented Left</image>
+			<action>WALK_LEFT</action>
+		</leftCharacter>
+		<speechBubble>
+			<text><![CDATA[<sprite name="tear">]]></text>
+			<direction>RIGHT</direction>
+		</speechBubble>
+	</Section>
+</Scene>
