@@ -8,6 +8,10 @@ public class FallOffWorld : MonoBehaviour {
 
     public CapsuleCollider2D Checkpoint;
 
+    public AudioSource DeathSound;
+
+    public AudioSource CheckPointSound;
+
     //public GameObject Cylinder;
 
 	// Use this for initialization
@@ -27,11 +31,13 @@ public class FallOffWorld : MonoBehaviour {
         {
             other.transform.position = Checkpoint.transform.position;
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+            DeathSound.Play();
         }
         else
         {
             other.transform.position = new Vector2(-6f, -0.5f);
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+            DeathSound.Play();
         }
         
     }

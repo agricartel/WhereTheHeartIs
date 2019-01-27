@@ -13,6 +13,12 @@ public class TimerController : MonoBehaviour, IMiniGame {
 
     bool CompletedMission = false;
 
+    public AudioSource FlagPole;
+
+    public AudioSource DeathTone;
+
+    bool OutOfTime = false;
+
     public GameObject ControllerObject
     {
         get
@@ -34,13 +40,15 @@ public class TimerController : MonoBehaviour, IMiniGame {
 	void Update () {
         TimeSpan TimeLeft = DateTime.Now - BeginTime;
 
-        time = 120 - (int)TimeLeft.TotalSeconds;
+        time = 100 - (int)TimeLeft.TotalSeconds;
 
         TimerText.SetText((time).ToString());
 
-        if (time <= 0)
+        if (time <= 0 && !OutOfTime)
         {
+            DeathTone.Play();
 
+            OutOfTime = true;
         }
 
 	}
@@ -49,7 +57,7 @@ public class TimerController : MonoBehaviour, IMiniGame {
     {
         if (other.gameObject.name == "Player")
             CompletedMission = true;
-
+        FlagPole.Play();
     }
 
     public bool IsFinished()
